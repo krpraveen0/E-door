@@ -7,7 +7,7 @@ from .products import Products
 from .customers import Customer
 import datetime
 
-class Orders(models.Model):
+class Order(models.Model):
     product = models.ForeignKey(Products,on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
